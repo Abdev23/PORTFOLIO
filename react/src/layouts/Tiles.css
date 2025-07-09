@@ -1,0 +1,53 @@
+
+/*
+=========
+TILES CSS
+=========
+*/
+
+
+#tiles {
+  position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: calc(100vw / var(--columns));
+}
+
+.tile {
+  cursor: pointer;
+  position: relative;
+}
+
+.tile:before {
+  background: rgb(var(--color-base));
+	border: 1px solid rgb(var(--color-border) / 5%);
+	content: "";
+	inset: 0px;
+	position: absolute;
+  transition: background-color 1500ms ease;
+}
+
+.tile:hover:before {
+  transition-duration: 0ms;
+}
+
+.tile:nth-child(4n):hover:before {
+  background: rgb(var(--color-slate));
+}
+
+.tile:nth-child(4n + 1):hover:before {
+  background: rgb(var(--color-stone));
+}
+
+.tile:nth-child(4n + 2):hover:before {
+  background: rgb(var(--color-pewter));
+}
+
+.tile:nth-child(4n + 3):hover:before {
+  background: rgb(var(--color-ash));
+}

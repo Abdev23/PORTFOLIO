@@ -1,0 +1,63 @@
+
+/*
+=========
+PORTFOLIO
+=========
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family:  "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  --tw-text-opacity: 1;
+  --tw-bg-opacity: 1;
+  background: rgb(10 10 10 / var(--tw-bg-opacity));
+  color: rgb(231 229 228 / var(--tw-text-opacity));
+}
+
+body.light {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background: rgb(255 255 255 / var(--tw-bg-opacity));
+  color: rgb(26 26 26 / var(--tw-text-opacity));
+}
+
+.main-grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .main-grid {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.main-grid-child1 {
+  max-width: 80rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-grid-child2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}

@@ -1,0 +1,66 @@
+
+/*
+=========
+PORTFOLIO
+=========
+*/
+
+
+@font-face {
+  font-family: 'CoolFont';
+  src: url('./assets/fonts/Raleway-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-bg: 15 23 36;
+  --color-text: 244 247 250;
+
+  --color-base: 15 15 15;
+  --color-border: 255 255 255;
+  --color-slate: 45 45 45;
+  --color-stone: 55 55 55;
+  --color-pewter: 65 65 65;
+  --color-ash: 75 75 75;
+}
+
+[data-theme="midnight"] {
+  --color-bg: 20 30 60;
+  --color-text: 210 230 255;
+
+  --color-base: 18 25 45;
+  --color-border: 130 180 230;
+  --color-slate: 50 70 110;
+  --color-stone: 70 90 140;
+  --color-pewter: 90 110 170;
+  --color-ash: 110 130 200;
+}
+
+[data-theme="light"] {
+  --color-bg: 244 247 250;
+  --color-text: 15 23 36;
+
+  --color-base: 240 240 240;
+  --color-border: 0 0 0;
+  --color-slate: 230 230 230;
+  --color-stone:  220 220 220;
+  --color-pewter: 210 210 210;
+  --color-ash:    200 200 200;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  background: rgb(var(--color-bg));
+	color: rgb(var(--color-text));
+	font-family: 'CoolFont', sans-serif;
+  display: grid;
+	place-items: center;
+	min-height: 100vh;
+	padding: 2rem; 
+}
