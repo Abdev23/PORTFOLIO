@@ -1,0 +1,23 @@
+
+/*
+==========
+FOOTER CSS
+==========
+*/
+
+.footer {
+  background: hsl(var(--color-bg));
+  border: 1px solid hsl(var(--color-border) / 10%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  max-width: fit-content;
+  border-radius: .5rem;
+  box-shadow: var(--shadow-complet);
+  opacity: var(--opacity-full);
+  pointer-events: auto;
+  z-index: 20;
+}

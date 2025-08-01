@@ -1,0 +1,68 @@
+
+/*
+===========
+CHATBOT CSS
+===========
+*/
+
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages .message {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  max-width: 80%;
+  line-height: 1.4;
+  color: hsl(var(--color-text));
+}
+
+.chat-messages .received {
+  background: hsl(var(--color-border) / 5%);
+  border-bottom-left-radius: 0.25rem;
+  align-self: flex-start;
+}
+
+.chat-messages .sent {
+  background: hsl(var(--color-accent));
+  border-bottom-right-radius: 0.25rem;
+  align-self: flex-end;
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-form input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid hsl(var(--color-border) / 10%);
+  border-radius: 0.5rem;
+  background: hsl(var(--color-bg));
+  color: hsl(var(--color-text));
+  font-size: 1rem;
+}
+
+.chat-form button {
+  padding: 0.75rem;
+  background: hsl(var(--color-text));
+  color: hsl(var(--color-bg));
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+
+.chat-form button:hover {
+  background: hsl(var(--color-text) / 80%);
+}
+
+.chat-form button:disabled {
+  opacity: var(--opacity-medium);
+  cursor: not-allowed;
+  background-color: hsl(var(--color-text));
+}

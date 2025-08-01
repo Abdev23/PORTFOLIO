@@ -1,7 +1,7 @@
 
 import { useRef } from 'react';
-import { useGrid } from '../hooks/useGrid';
 
+import { useGrid } from '../hooks/useGrid';
 import './Tiles.css';
 
 

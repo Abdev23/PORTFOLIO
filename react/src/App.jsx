@@ -1,6 +1,6 @@
 
-import Navbar from './layouts/Navbar';
-import Tiles from './layouts/Tiles';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
 import './App.css';
 
 
@@ -9,12 +9,9 @@ function App() {
 
   return (
     <>
-      <Tiles />
-      <Navbar />
-
-      <div className='main'>
-        portfolio
-      </div>
+      <MainLayout>
+        <HomePage />
+      </MainLayout>
     </>
   )
 }

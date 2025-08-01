@@ -1,0 +1,146 @@
+
+/*
+================
+THEME PICKER CSS
+================
+*/
+
+
+.theme-picker-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.theme-selectors {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 .25rem;
+}
+
+.theme-selector {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background-color: hsl(var(--color-secondary) / 20%);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-selector:hover {
+  background-color: hsl(var(--color-secondary) / 60%);
+  transform: translateY(-5px);
+}
+
+.theme-selector.active {
+  border-color: hsl(var(--color-text) / 80%);
+  background-color: hsl(var(--color-border) / 10%);
+  transform: translateY(-5px) scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .theme-selectors {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .theme-selector {
+    flex-basis: 40%;
+    padding: 1rem;
+  }
+}
+
+.theme-svg {
+  width: 48px;
+  height: 48px;
+  color: hsl(var(--color-text));
+}
+
+/* SVG Animations */
+@keyframes rotate-sun {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-sun-rays {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wiggle-moon {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes twinkle-star {
+  0%, 100% {
+    transform: scale(1);
+    opacity: var(--opacity-high); 
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: var(--opacity-full);
+  }
+}
+
+#light-svg {
+  animation: rotate-sun 25s linear infinite;
+}
+
+#light-svg path:nth-of-type(1),
+#light-svg path:nth-of-type(2),
+#light-svg path:nth-of-type(5),
+#light-svg path:nth-of-type(6) {
+  transform-origin: center;
+  animation: pulse-sun-rays 3s ease-in-out infinite;
+}
+
+#light-svg path:nth-of-type(3),
+#light-svg path:nth-of-type(4),
+#light-svg path:nth-of-type(6),
+#light-svg path:nth-of-type(7) {
+  transform-origin: center;
+  animation: pulse-sun-rays 3s ease-in-out 1.5s infinite;
+}
+
+#dim-svg path:nth-of-type(1),
+#dim-svg path:nth-of-type(2),
+#dim-svg path:nth-of-type(3),
+#dim-svg path:nth-of-type(4) {
+  transform-origin: 60% 40%;
+  animation: pulse-sun-rays 3s ease-in-out infinite;
+}
+
+#dim-svg path:nth-of-type(5) {
+  transform-origin: center;
+  animation: wiggle-moon 3s ease-in-out infinite;
+}
+
+#dark-svg path:nth-child(2),
+#dark-svg path:nth-child(3) {
+  transform-origin: 20px 8px;
+  animation: twinkle-star 3s ease-in-out infinite;
+}
+
+#dark-svg path:nth-child(1) {
+  transform-origin: center;
+  animation: wiggle-moon 3s ease-in-out infinite;
+}
+
+.theme-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(var(--color-text) / 80%);
+}

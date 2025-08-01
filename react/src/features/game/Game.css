@@ -1,0 +1,108 @@
+
+/*
+========
+GAME CSS
+========
+*/
+
+
+.game-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.game-screen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.game-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  color: hsl(var(--color-text) / 70%);
+}
+
+.game-score span:last-child {
+  font-size: 2rem;
+  font-weight: 500;
+  color: hsl(var(--color-text));
+}
+
+.game-result-area {
+  min-width: 120px;
+}
+
+.game-result-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.game-choices {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.game-choice-btn {
+  background: hsl(var(--color-base));
+  border: 1px solid hsl(var(--color-border) / 10%);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  color: hsl(var(--color-text));
+}
+
+.game-choice-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: hsl(var(--color-primary));
+}
+
+.game-choice-btn:active {
+  transform: translateY(-2px) scale(1);
+}
+
+.game-choice-btn svg {
+  width: 50px;
+  height: 50px;
+}
+
+.game-controls {
+  margin-top: 1rem;
+}
+
+.game-reset-btn {
+  background: none;
+  border: 1px solid hsl(var(--color-border) / 20%);
+  color: hsl(var(--color-text) / 70%);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-reset-btn:hover {
+  background: hsl(var(--color-base));
+  color: hsl(var(--color-text));
+  border-color: hsl(var(--color-border) / 40%);
+}
+
+/* game status visual feedback */
+.game-result-text.win { color: #28a745; }
+.game-result-text.lose { color: #dc3545; }
+.game-result-text.tie { color: hsl(var(--color-text) / 70%); }

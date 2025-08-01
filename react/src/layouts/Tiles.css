@@ -24,8 +24,8 @@ TILES CSS
 }
 
 .tile:before {
-  background: rgb(var(--color-base));
-	border: 1px solid rgb(var(--color-border) / 5%);
+  background: hsl(var(--color-base));
+	border: 1px solid hsl(var(--color-border) / 5%);
 	content: "";
 	inset: 0px;
 	position: absolute;
@@ -37,17 +37,17 @@ TILES CSS
 }
 
 .tile:nth-child(4n):hover:before {
-  background: rgb(var(--color-slate));
+  background: hsl(var(--color-primary));
 }
 
 .tile:nth-child(4n + 1):hover:before {
-  background: rgb(var(--color-stone));
+  background: hsl(var(--color-secondary));
 }
 
 .tile:nth-child(4n + 2):hover:before {
-  background: rgb(var(--color-pewter));
+  background: hsl(var(--color-accent));
 }
 
 .tile:nth-child(4n + 3):hover:before {
-  background: rgb(var(--color-ash));
+  background: hsl(var(--color-muted));
 }

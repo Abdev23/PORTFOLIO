@@ -5,48 +5,97 @@ PORTFOLIO
 =========
 */
 
+/*
+========
+ROOT CSS
+========
+*/
+
 
 @font-face {
   font-family: 'CoolFont';
   src: url('./assets/fonts/Raleway-Medium.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
 :root {
-  --color-bg: 15 23 36;
-  --color-text: 244 247 250;
+  --gray-50:  210 67% 97%;
+  --gray-100: 0 0% 94%;
+  --gray-200: 0 0% 90%;
+  --gray-300: 0 0% 86%;
+  --gray-400: 0 0% 82%;
+  --gray-500: 0 0% 78%;
+  --gray-600: 0 0% 60%;
+  --gray-700: 0 0% 45%;
+  --gray-800: 0 0% 29%;
+  --gray-850: 0 0% 22%;
+  --gray-900: 0 0% 12%;
+  --gray-950: 0 0% 6%;
 
-  --color-base: 15 15 15;
-  --color-border: 255 255 255;
-  --color-slate: 45 45 45;
-  --color-stone: 55 55 55;
-  --color-pewter: 65 65 65;
-  --color-ash: 75 75 75;
+  --blue-100: 218 100% 91%;
+  --blue-200: 210 59% 71%;
+  --blue-700: 225 31% 61%;
+  --blue-800: 224 31% 51%;
+  --blue-850: 223 32% 46%;
+  --blue-900: 223 33% 41%;
+  --blue-950: 225 50% 16%;
+  --blue-975: 224 43% 12%;
+  
+  /* core colors */
+  --white: 0 0% 100%;
+  --black: 0 0% 0%;
+  --dark-text: 217 42% 10%;
+  
+  /* opacity tokens */
+  --opacity-full: 1;
+  --opacity-high: 0.7;
+  --opacity-medium: 0.5;
+  --opacity-low: 0;
+
+  /* shadow elevations */
+  --shadow-color-hsl: 0 0% 0%;
+  --shadow-sm:  0 1px 2px 0;
+  --shadow-inset: inset 0 2px 4px 0;
 }
 
-[data-theme="midnight"] {
-  --color-bg: 20 30 60;
-  --color-text: 210 230 255;
+[data-theme="dark"] {
+  --color-bg:     var(--gray-900);
+  --color-text:   var(--gray-50);
+  --color-base:   var(--gray-950);
+  --color-primary:  var(--gray-850);
+  --color-secondary:  var(--gray-800);
+  --color-accent: var(--gray-700);
+  --color-muted: var(--gray-600);
+  --color-border: var(--white);
+  --shadow-opacity: 20%;
+  --shadow-complet: var(--shadow-sm) hsl(var(--shadow-color-hsl) / var(--shadow-opacity));
+}
 
-  --color-base: 18 25 45;
-  --color-border: 130 180 230;
-  --color-slate: 50 70 110;
-  --color-stone: 70 90 140;
-  --color-pewter: 90 110 170;
-  --color-ash: 110 130 200;
+[data-theme="dim"] {
+  --color-bg:     var(--blue-950);
+  --color-text:   var(--blue-100);
+  --color-base:   var(--blue-975);
+  --color-primary:  var(--blue-850);
+  --color-secondary:  var(--blue-900);
+  --color-accent: var(--blue-800);
+  --color-muted:    var(--blue-700);
+  --color-border: var(--blue-200);
+  --shadow-opacity: 20%;
+  --shadow-complet: var(--shadow-sm) hsl(var(--shadow-color-hsl) / var(--shadow-opacity));
 }
 
 [data-theme="light"] {
-  --color-bg: 244 247 250;
-  --color-text: 15 23 36;
-
-  --color-base: 240 240 240;
-  --color-border: 0 0 0;
-  --color-slate: 230 230 230;
-  --color-stone:  220 220 220;
-  --color-pewter: 210 210 210;
-  --color-ash:    200 200 200;
+  --color-bg:     var(--gray-50);
+  --color-text:   var(--dark-text);
+  --color-base:   var(--gray-100);
+  --color-primary:  var(--gray-200);
+  --color-secondary:  var(--gray-300);
+  --color-accent: var(--gray-400);
+  --color-muted:    var(--gray-500);
+  --color-border: var(--black);
+  --shadow-opacity: 8%;
+  --shadow-complet: var(--shadow-sm) hsl(var(--shadow-color-hsl) / var(--shadow-opacity));
 }
 
 * {
@@ -56,11 +105,41 @@ PORTFOLIO
 }
 
 body {
-  background: rgb(var(--color-bg));
-	color: rgb(var(--color-text));
-	font-family: 'CoolFont', sans-serif;
+  background: hsl(var(--color-bg));
+	color: hsl(var(--color-text));
+	font-family: CoolFont, sans-serif;
   display: grid;
 	place-items: center;
 	min-height: 100vh;
 	padding: 2rem; 
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--color-base));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--color-accent));
+  border-radius: 8px;
+  border: 2px solid hsl(var(--color-base));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--color-primary));
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--color-accent)) hsl(var(--color-base));
 }

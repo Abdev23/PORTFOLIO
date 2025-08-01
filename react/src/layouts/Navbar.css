@@ -5,9 +5,142 @@ NAVBAR CSS
 ==========
 */
 
-.navbar {
+
+.navbar {  
+  background: hsl(var(--color-bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 2.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  max-width: fit-content;
+  border: 1px solid hsl(var(--color-border) / 10%);
+  border-radius: .5rem;
+  box-shadow: var(--shadow-complet);
+  z-index: 20;
+  opacity: var(--opacity-full);
+  pointer-events: auto;
+  transition: top .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.navbar--hidden {
+  top: -100px;
+  opacity: var(--opacity-low);
+  pointer-events: none;
+}
+
+.nav-link {
+  color: hsl(var(--color-text));
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: hsl(var(--color-text) / 80%);
+}
+
+.nav-link-icon {
+  margin: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-span {
+  margin: 0 1rem;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-link-icon {
+    display: none;
+  }
+
+  .nav-link-span {
+    display: block;
+  }
+}
+
+.nav-separator {
+  height: 30px;
+  width: 5px;
+  background: hsl(var(--color-border) / 20%);
+  margin: 0 1rem;
+  border-radius: 3px;
+}
+
+/* navbar menu */
+.nav-menu-container {
+  position: relative;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-menu {
   position: absolute;
-  top: 3rem;
-  z-index: 2;
-  border: 1px solid rgb(var(--color-border) / 50%);
+  right: -33px;
+  top: calc(100% + 35px);
+  min-width: 200px;
+  background: hsl(var(--color-bg));
+  border: 1px solid hsl(var(--color-border) / 10%);
+  border-radius: .5rem;
+  padding: 0.5rem;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: var(--opacity-full);
+  box-shadow: var(--shadow-complet);
+  transform: translateY(0);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* navbar menu tooltip */
+.nav-menu::before {
+  content: '';
+  position: absolute;
+  bottom: 150px;
+  left: 75%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid hsl(var(--color-bg));  
+  filter: drop-shadow(0 -1px 0 hsl(var(--color-border) / 10%));
+}
+
+.nav-menu.hidden {
+  opacity: var(--opacity-low);
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.nav-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  border-radius: .25rem;
+  cursor: pointer;
+  color: hsl(var(--color-text));
+  font-size: 1rem;
+}
+
+.nav-menu-btn:hover {
+  background: hsl(var(--color-border) / 5%);
 }
