@@ -1,0 +1,14 @@
+
+{
+  "meta": { "version": "1.0", "count": 2 },
+  "db": [
+    {
+      "lang": "en",
+      "education": "IT specialised technician"
+    },
+    {
+      "lang": "fr",
+      "education": "technicien spécialisé en TI"
+    }
+  ]
+}
