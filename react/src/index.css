@@ -143,3 +143,7 @@ body.no-scroll {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--color-accent)) hsl(var(--color-base));
 }
+
+#root {
+  display: contents;
+}

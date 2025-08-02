@@ -52,7 +52,9 @@ const Navbar = ({ onMenuClick }) => {
   };
 
   return (
-		<div className={`navbar ${isNavVisible ? '' : 'navbar--hidden'}`} id='navbar'>
+		<div id='navbar'
+				 className={`navbar ${isNavVisible ? '' : 'navbar--hidden'}`} 
+		>
 			<a className='nav-link' href='#home'>
 				<span className='nav-link-icon'>
           <HomeIcon />

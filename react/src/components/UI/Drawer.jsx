@@ -25,8 +25,8 @@ const Drawer = ({isOpen, onClose, children}) => {
   }, [isOpen]);
 
   return (
-    <div className={`drawer ${isOpen ? '': 'hidden'}`}
-         id='drawer'
+    <div id='drawer'
+         className={`drawer ${isOpen ? '': 'hidden'}`}
          ref={drawerRef}
     >
 			<div className='drawer-content'

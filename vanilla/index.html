@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
 		<script src="./theme-init.js"></script>
 		<link rel="stylesheet" href="./style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,377 +11,458 @@
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 
 		<title>Abdelhamid Maaira</title>
-		<link rel="icon" href="./assets/favicon.ico" type="image/x-icon" sizes="48x48">
 		<meta name="description" content="My personal portfolio to showcase my projects and work.">
+		<meta name="next-size-adjust">
+    <meta name="keywords" content="developer portfolio, software engineer, web developer, backend developer, JavaScript, Node.js, React, HTML, CSS, Python, programmer, GitHub projects">
+		<meta property="og:title" content="Abdelhamid Maaira - Web Developer Portfolio">
+		<meta property="og:description" content="Hi, I’m Abdelhamid, a frontend/backend developer. View my projects, skills, and contact info.">
+		<meta property="og:image" content="./assets/preview.png">
+		<meta property="og:url" content="https://abdelhamidev.netlify.app">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Abdelhamid Maaira Portfolio">
+		<meta property="og:image:width" content="800">
+		<meta property="og:image:height" content="418">
+		<meta name="twitter:card" content="summary_large_image">
 	</head>
 
 	<body>
 
-		<!-- Tiles background -->
-    <div id="tiles"></div>
-
-		<!-- Navbar -->
-		<div class="navbar" id="navbar">
-			<a class="nav-link" href="#home">
-				<span class="nav-link-icon">
-					<svg xmlns="http://www.w3.org/2000/svg"
-							 width="24" height="24" viewBox="0 0 24 24"
-							 fill="none" stroke="currentColor"
-							 stroke-width="2" stroke-linecap="round"
-							 stroke-linejoin="round" class="lucide lucide-house"
-					>
-						<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-						<path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-					</svg>
-				</span>
-				<span class="nav-link-span">Home</span>
-			</a>
-			
-			<a class="nav-link" href="#projects">
-				<span class="nav-link-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24"
-							 height="24" viewBox="0 0 24 24"
-							 fill="none" stroke="currentColor"
-							 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-							 class="lucide lucide-briefcase-business"
-					>
-						<path d="M12 12h.01"></path>
-						<path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-						<path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
-						<rect width="20" height="14" x="2" y="6" rx="2"></rect>
-					</svg>
-				</span>
-				<span class="nav-link-span">Projects</span>
-			</a>
-			
-			<a class="nav-link" href="#about">
-				<span class="nav-link-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-							 viewBox="0 0 24 24" fill="none" stroke="currentColor"
-							 stroke-width="2" stroke-linecap="round"
-							 stroke-linejoin="round"
-							 class="lucide lucide-user-round"
-					>
-						<circle cx="12" cy="8" r="5"></circle>
-						<path d="M20 21a8 8 0 0 0-16 0"></path>
-					</svg>
-				</span>
-				<span class="nav-link-span">About</span>
-			</a>
-			
-			<a class="nav-link" href="#contact">
-				<span class="nav-link-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-							 viewBox="0 0 24 24" fill="none"
-							 stroke="currentColor" stroke-width="2"
-							 stroke-linecap="round" stroke-linejoin="round"
-							 class="lucide lucide-contact"
-					>
-						<path d="M16 2v2"></path>
-						<path d="M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"></path>
-						<path d="M8 2v2"></path>
-						<circle cx="12" cy="11" r="3"></circle>
-						<rect x="3" y="4" width="18" height="18" rx="2"></rect>
-					</svg>
-				</span>
-				<span class="nav-link-span">Contact</span>
-			</a>
-
-			<div class="nav-separator"></div>
-
-			<div class="nav-menu-container">
-				<!-- Navbar btn -->
-				<button class="nav-link nav-btn" id="nav-btn" aria-label="Open Action Menu">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-							 viewBox="0 0 24 24" fill="none"
-							 stroke="currentColor" stroke-width="2"
-							 stroke-linecap="round" stroke-linejoin="round"
-							 class="lucide lucide-ellipsis"
-					>
-						<circle cx="12" cy="12" r="1"/>
-						<circle cx="19" cy="12" r="1"/>
-						<circle cx="5" cy="12" r="1"/>
-					</svg>
-				</button>
-
-				<!-- Navbar menu -->
-				<div class="nav-menu hidden" id="nav-menu">
-					<button class="nav-menu-btn" id="themes-btn">
+		<div id="root">
+			<!-- Tiles background -->
+			<div id="tiles"></div>
+	
+			<!-- Navbar -->
+			<div id="navbar" class="navbar" id="navbar">
+				<a class="nav-link" href="#home">
+					<span class="nav-link-icon">
 						<svg xmlns="http://www.w3.org/2000/svg"
-		  					 class="lucide lucide-sun"
-								 width="24" height="24"
-								 viewBox="0 0 24 24" fill="none"
-								 stroke="currentColor" stroke-width="2"
-								 stroke-linecap="round" stroke-linejoin="round"
-								 class="lucide lucide-sun-moon-icon lucide-sun-moon"
+								 width="24" height="24" viewBox="0 0 24 24"
+								 fill="none" stroke="currentColor"
+								 stroke-width="2" stroke-linecap="round"
+								 stroke-linejoin="round" class="lucide lucide-house"
 						>
-							<path d="M12 2v2"/>
-							<path d="M13 8.129A4 4 0 0 1 15.873 11"/>
-							<path d="m19 5-1.256 1.256"/>
-							<path d="M20 12h2"/>
-							<path d="M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7"/>
+							<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+							<path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
 						</svg>
-						<span>Pick a theme</span>
-					</button>
-		
-					<button class="nav-menu-btn" id="chatbot-btn">
-						<svg xmlns="http://www.w3.org/2000/svg"
-								 width="24" height="24"
-								 viewBox="0 0 24 24" fill="none"
-								 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+					</span>
+					<span class="nav-link-span">Home</span>
+				</a>
+				
+				<a class="nav-link" href="#projects">
+					<span class="nav-link-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24"
+								 height="24" viewBox="0 0 24 24"
+								 fill="none" stroke="currentColor"
+								 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								 class="lucide lucide-briefcase-business"
+						>
+							<path d="M12 12h.01"></path>
+							<path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+							<path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+							<rect width="20" height="14" x="2" y="6" rx="2"></rect>
+						</svg>
+					</span>
+					<span class="nav-link-span">Projects</span>
+				</a>
+				
+				<a class="nav-link" href="#about">
+					<span class="nav-link-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+								 stroke-width="2" stroke-linecap="round"
 								 stroke-linejoin="round"
-								 class="lucide lucide-bot-icon lucide-bot"
+								 class="lucide lucide-user-round"
 						>
-							<path d="M12 8V4H8"/>
-							<rect width="16" height="12" x="4" y="8" rx="2"/>
-							<path d="M2 14h2"/>
-							<path d="M20 14h2"/><path d="M15 13v2"/>
-							<path d="M9 13v2"/>
+							<circle cx="12" cy="8" r="5"></circle>
+							<path d="M20 21a8 8 0 0 0-16 0"></path>
 						</svg>
-						<span>Talk to me</span>
-					</button>
-
-					<button class="nav-menu-btn" id="game-btn">
-						<svg xmlns="http://www.w3.org/2000/svg"
-								 width="24" height="24"
+					</span>
+					<span class="nav-link-span">About</span>
+				</a>
+				
+				<a class="nav-link" href="#contact">
+					<span class="nav-link-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 								 viewBox="0 0 24 24" fill="none"
 								 stroke="currentColor" stroke-width="2"
 								 stroke-linecap="round" stroke-linejoin="round"
-								 class="lucide lucide-gamepad-icon lucide-gamepad"
+								 class="lucide lucide-contact"
 						>
-							<line x1="6" x2="10" y1="12" y2="12"/>
-							<line x1="8" x2="8" y1="10" y2="14"/>
-							<line x1="15" x2="15.01" y1="13" y2="13"/>
-							<line x1="18" x2="18.01" y1="11" y2="11"/>
-							<rect width="20" height="12" x="2" y="6" rx="2"/>
+							<path d="M16 2v2"></path>
+							<path d="M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"></path>
+							<path d="M8 2v2"></path>
+							<circle cx="12" cy="11" r="3"></circle>
+							<rect x="3" y="4" width="18" height="18" rx="2"></rect>
 						</svg>
-						<span>Mini Game</span>
+					</span>
+					<span class="nav-link-span">Contact</span>
+				</a>
+	
+				<div class="nav-separator"></div>
+	
+				<div class="nav-menu-container">
+					<!-- Navbar btn -->
+					<button class="nav-link nav-btn" id="nav-btn" aria-label="Open Action Menu">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								 viewBox="0 0 24 24" fill="none"
+								 stroke="currentColor" stroke-width="2"
+								 stroke-linecap="round" stroke-linejoin="round"
+								 class="lucide lucide-ellipsis"
+						>
+							<circle cx="12" cy="12" r="1"/>
+							<circle cx="19" cy="12" r="1"/>
+							<circle cx="5" cy="12" r="1"/>
+						</svg>
 					</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- drawer -->
-		<div class="drawer hidden" id="drawer">
-			<div class="drawer-content" id="drawer-content">
-				<div class="drawer-handle"></div>
-
-				<!-- themes -->
-				<div class="drawer-option themes-option hidden" id="themes-option">
-					<div class="drawer-header">
-						<h3 class="drawer-title">Pick a theme</h3>
-					</div>
-
-					<div class="drawer-body theme-picker-body">
-						<div class="theme-selectors">
-							<!-- light Theme Selector -->
-							<div class="theme-selector" data-theme-name="light"
-									 aria-label="Switch to light Theme"
+	
+					<!-- Navbar menu -->
+					<div class="nav-menu hidden" id="nav-menu">
+						<button class="nav-menu-btn" id="themes-btn">
+							<svg xmlns="http://www.w3.org/2000/svg"
+									 class="lucide lucide-sun"
+									 width="24" height="24"
+									 viewBox="0 0 24 24" fill="none"
+									 stroke="currentColor" stroke-width="2"
+									 stroke-linecap="round" stroke-linejoin="round"
+									 class="lucide lucide-sun-moon-icon lucide-sun-moon"
 							>
-								<svg xmlns="http://www.w3.org/2000/svg"
-										 id="light-svg"
-										 class="theme-svg lucide lucide-sun-icon lucide-sun"
-										 width="24" height="24"
-										 viewBox="0 0 24 24" fill="none"
-										 stroke="currentColor" stroke-width="2"
-										 stroke-linecap="round" stroke-linejoin="round"
-								>
-									<circle cx="12" cy="12" r="4"/>
-									<path d="M12 2v2"/>
-									<path d="M12 20v2"/>
-									<path d="m4.93 4.93 1.41 1.41"/>
-									<path d="m17.66 17.66 1.41 1.41"/>
-									<path d="M2 12h2"/>
-									<path d="M20 12h2"/>
-									<path d="m6.34 17.66-1.41 1.41"/>
-									<path d="m19.07 4.93-1.41 1.41"/>
-								</svg>
-								<p class="theme-name">light</p>
-							</div>
-
-							<!-- Dim Theme Selector -->
-							<div class="theme-selector" data-theme-name="dim"
-									aria-label="Switch to Dim Theme"
+								<path d="M12 2v2"/>
+								<path d="M13 8.129A4 4 0 0 1 15.873 11"/>
+								<path d="m19 5-1.256 1.256"/>
+								<path d="M20 12h2"/>
+								<path d="M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7"/>
+							</svg>
+							<span>Pick a theme</span>
+						</button>
+			
+						<button class="nav-menu-btn" id="chatbot-btn">
+							<svg xmlns="http://www.w3.org/2000/svg"
+									 width="24" height="24"
+									 viewBox="0 0 24 24" fill="none"
+									 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									 stroke-linejoin="round"
+									 class="lucide lucide-bot-icon lucide-bot"
 							>
-								<svg xmlns="http://www.w3.org/2000/svg"
-										 id="dim-svg"
-										 class="theme-svg lucide lucide-sun-moon-icon lucide-sun-moon"
-										 width="24" height="24"
-										 viewBox="0 0 24 24" fill="none"
-										 stroke="currentColor" stroke-width="2"
-										 stroke-linecap="round" stroke-linejoin="round"
-								>
-									<path d="M12 2v2"/>
-									<path d="M13 8.129A4 4 0 0 1 15.873 11"/>
-									<path d="m19 5-1.256 1.256"/>
-									<path d="M20 12h2"/>
-									<path d="M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7"/>
-								</svg>
-								<p class="theme-name">Dim</p>
-							</div>
-
-							<!-- Dark Theme Selector -->
-							<div class="theme-selector" data-theme-name="dark"
-									aria-label="Switch to Dark Theme"
+								<path d="M12 8V4H8"/>
+								<rect width="16" height="12" x="4" y="8" rx="2"/>
+								<path d="M2 14h2"/>
+								<path d="M20 14h2"/><path d="M15 13v2"/>
+								<path d="M9 13v2"/>
+							</svg>
+							<span>Talk to me</span>
+						</button>
+	
+						<button class="nav-menu-btn" id="game-btn">
+							<svg xmlns="http://www.w3.org/2000/svg"
+									 width="24" height="24"
+									 viewBox="0 0 24 24" fill="none"
+									 stroke="currentColor" stroke-width="2"
+									 stroke-linecap="round" stroke-linejoin="round"
+									 class="lucide lucide-gamepad-icon lucide-gamepad"
 							>
-								<svg xmlns="http://www.w3.org/2000/svg"
-										 id="dark-svg"
-										 class="theme-svg lucide lucide-moon-star-icon lucide-moon-star"
-										 width="24" height="24"
-										 viewBox="0 0 24 24" fill="none"
-										 stroke="currentColor" stroke-width="2"
-										 stroke-linecap="round" stroke-linejoin="round"
-								>
-									<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/>
-									<path d="M20 3v4"/>
-									<path d="M22 5h-4"/>
-								</svg>
-								<p class="theme-name">Dark</p>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- chatbot -->
-				<div class="drawer-option chatbot-option hidden" id="chatbot-option">
-					<div class="drawer-header">
-						<h3 class="drawer-title">Ask me anything!</h3>
-					</div>
-					
-					<div class="drawer-body" id="chatbot-body">
-						<div class="chat-messages" id="chat-messages">
-							<div class="message received">
-								Hello! How can I help you today?
-							</div>
-							<div class="message sent">
-								Yeah whatsup!
-							</div>
-							<div class="message received">
-								Hello! How can I help you today?
-							</div>
-							<div class="message sent">
-								Yeah whatsup!
-							</div>
-							<div class="message received">
-								Hello! How can I help you today?
-							</div>
-							<div class="message sent">
-								Yeah whatsup!
-							</div>
-						</div>
-					</div>
-					
-					<div class="drawer-footer">
-						<form class="chat-form" id="chat-form">
-							<input id="chat-input" type="text" placeholder="Type your message..." />
-							<button id="chat-submit-btn" type="submit" aria-label="Send Message">
-								<svg xmlns="http://www.w3.org/2000/svg"
-										 width="24" height="24"
-										 viewBox="0 0 24 24" fill="none"
-										 stroke="currentColor" stroke-width="2"
-										 stroke-linecap="round" stroke-linejoin="round"
-										 class="lucide lucide-send-horizontal"
-								>
-									<path d="m3 3 3 9-3 9 19-9Z"/>
-									<path d="M6 12h16"/>
-								</svg>
-							</button>
-						</form>
-					</div>
-				</div>
-
-				<!-- game -->
-				<div class="drawer-option game-option hidden" id="game-option">
-					<div class="drawer-header">
-						<h3 class="drawer-title">Play a simple game</h3>
-					</div>
-
-					<div class="drawer-body game-body">
-							
-						<!-- Game Screen: Shows scores and results -->
-						<div class="game-screen">
-							<div class="game-score">
-								<span>You</span>
-								<span id="player-score">0</span>
-							</div>
-							<div class="game-result-area">
-								<p class="game-result-text" id="game-result-text">Choose your move!</p>
-							</div>
-							<div class="game-score">
-								<span>Bot</span>
-								<span id="bot-score">0</span>
-							</div>
-						</div>
-
-						<!-- Player Choices: The buttons the user clicks -->
-						<div class="game-choices">
-								<button class="game-choice-btn" data-choice="rock" aria-label="Choose Rock">
-									<svg xmlns="http://www.w3.org/2000/svg"
-											 width="24" height="24"
-											 viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2"
-											 stroke-linecap="round" stroke-linejoin="round"
-											 class="lucide lucide-grab-icon lucide-grab"
-									>
-										<path d="M18 11.5V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4"/>
-										<path d="M14 10V8a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/>
-										<path d="M10 9.9V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5"/>
-										<path d="M6 14a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/>
-										<path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0"/>
-									</svg>
-								</button>
-								<button class="game-choice-btn" data-choice="paper" aria-label="Choose Paper">
-									<svg xmlns="http://www.w3.org/2000/svg"
-											 width="24" height="24"
-											 viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2"
-											 stroke-linecap="round" stroke-linejoin="round"
-											 class="lucide lucide-hand-icon lucide-hand"
-									>
-										<path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/>
-										<path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/>
-										<path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/>
-										<path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
-									</svg>
-								</button>
-								<button class="game-choice-btn" data-choice="scissors" aria-label="Choose Scissors">
-									<svg xmlns="http://www.w3.org/2000/svg"
-											 width="24" height="24"
-											 viewBox="0 0 24 24" fill="none"
-											 stroke="currentColor" stroke-width="2"
-											 stroke-linecap="round" stroke-linejoin="round"
-											 class="lucide lucide-scissors-icon lucide-scissors"
-									>
-										<circle cx="6" cy="6" r="3"/>
-										<path d="M8.12 8.12 12 12"/>
-										<path d="M20 4 8.12 15.88"/>
-										<circle cx="6" cy="18" r="3"/>
-										<path d="M14.8 14.8 20 20"/>
-									</svg>
-								</button>
-						</div>
-							
-						<!-- Game Controls: Button to reset the game -->
-						<div class="game-controls">
-							<button class="game-reset-btn" id="game-reset-btn">
-								Reset Score
-							</button>
-						</div>
+								<line x1="6" x2="10" y1="12" y2="12"/>
+								<line x1="8" x2="8" y1="10" y2="14"/>
+								<line x1="15" x2="15.01" y1="13" y2="13"/>
+								<line x1="18" x2="18.01" y1="11" y2="11"/>
+								<rect width="20" height="12" x="2" y="6" rx="2"/>
+							</svg>
+							<span>Mini Game</span>
+						</button>
 					</div>
 				</div>
 			</div>
+	
+			<!-- drawer -->
+			<div id="drawer" class="drawer hidden" id="drawer">
+				<div class="drawer-content" id="drawer-content">
+					<div class="drawer-handle"></div>
+	
+					<!-- themes -->
+					<div class="drawer-option themes-option hidden" id="themes-option">
+						<div class="drawer-header">
+							<h3 class="drawer-title">Pick a theme</h3>
+						</div>
+	
+						<div class="drawer-body theme-picker-body">
+							<div class="theme-selectors">
+								<!-- light Theme Selector -->
+								<div class="theme-selector" data-theme-name="light"
+										 aria-label="Switch to light Theme"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg"
+											 id="light-svg"
+											 class="theme-svg lucide lucide-sun-icon lucide-sun"
+											 width="24" height="24"
+											 viewBox="0 0 24 24" fill="none"
+											 stroke="currentColor" stroke-width="2"
+											 stroke-linecap="round" stroke-linejoin="round"
+									>
+										<circle cx="12" cy="12" r="4"/>
+										<path d="M12 2v2"/>
+										<path d="M12 20v2"/>
+										<path d="m4.93 4.93 1.41 1.41"/>
+										<path d="m17.66 17.66 1.41 1.41"/>
+										<path d="M2 12h2"/>
+										<path d="M20 12h2"/>
+										<path d="m6.34 17.66-1.41 1.41"/>
+										<path d="m19.07 4.93-1.41 1.41"/>
+									</svg>
+									<p class="theme-name">light</p>
+								</div>
+	
+								<!-- Dim Theme Selector -->
+								<div class="theme-selector" data-theme-name="dim"
+										aria-label="Switch to Dim Theme"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg"
+											 id="dim-svg"
+											 class="theme-svg lucide lucide-sun-moon-icon lucide-sun-moon"
+											 width="24" height="24"
+											 viewBox="0 0 24 24" fill="none"
+											 stroke="currentColor" stroke-width="2"
+											 stroke-linecap="round" stroke-linejoin="round"
+									>
+										<path d="M12 2v2"/>
+										<path d="M13 8.129A4 4 0 0 1 15.873 11"/>
+										<path d="m19 5-1.256 1.256"/>
+										<path d="M20 12h2"/>
+										<path d="M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7"/>
+									</svg>
+									<p class="theme-name">Dim</p>
+								</div>
+	
+								<!-- Dark Theme Selector -->
+								<div class="theme-selector" data-theme-name="dark"
+										aria-label="Switch to Dark Theme"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg"
+											 id="dark-svg"
+											 class="theme-svg lucide lucide-moon-star-icon lucide-moon-star"
+											 width="24" height="24"
+											 viewBox="0 0 24 24" fill="none"
+											 stroke="currentColor" stroke-width="2"
+											 stroke-linecap="round" stroke-linejoin="round"
+									>
+										<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/>
+										<path d="M20 3v4"/>
+										<path d="M22 5h-4"/>
+									</svg>
+									<p class="theme-name">Dark</p>
+								</div>
+	
+							</div>
+						</div>
+					</div>
+	
+					<!-- chatbot -->
+					<div class="drawer-option chatbot-option hidden" id="chatbot-option">
+						<div class="drawer-header">
+							<h3 class="drawer-title">Ask me anything!</h3>
+						</div>
+						
+						<div class="drawer-body" id="chatbot-body">
+							<div class="chat-messages" id="chat-messages">
+								<div class="message received">
+									Hello! How can I help you today?
+								</div>
+								<div class="message sent">
+									Yeah whatsup!
+								</div>
+								<div class="message received">
+									Hello! How can I help you today?
+								</div>
+								<div class="message sent">
+									Yeah whatsup!
+								</div>
+								<div class="message received">
+									Hello! How can I help you today?
+								</div>
+								<div class="message sent">
+									Yeah whatsup!
+								</div>
+							</div>
+						</div>
+						
+						<div class="drawer-footer">
+							<form class="chat-form" id="chat-form">
+								<input id="chat-input" type="text" placeholder="Type your message..." />
+								<button id="chat-submit-btn" type="submit" aria-label="Send Message">
+									<svg xmlns="http://www.w3.org/2000/svg"
+											 width="24" height="24"
+											 viewBox="0 0 24 24" fill="none"
+											 stroke="currentColor" stroke-width="2"
+											 stroke-linecap="round" stroke-linejoin="round"
+											 class="lucide lucide-send-horizontal"
+									>
+										<path d="m3 3 3 9-3 9 19-9Z"/>
+										<path d="M6 12h16"/>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+	
+					<!-- game -->
+					<div class="drawer-option game-option hidden" id="game-option">
+						<div class="drawer-header">
+							<h3 class="drawer-title">Play a simple game</h3>
+						</div>
+	
+						<div class="drawer-body game-body">
+								
+							<!-- Game Screen: Shows scores and results -->
+							<div class="game-screen">
+								<div class="game-score">
+									<span>You</span>
+									<span id="player-score">0</span>
+								</div>
+								<div class="game-result-area">
+									<p class="game-result-text" id="game-result-text">Choose your move!</p>
+								</div>
+								<div class="game-score">
+									<span>Bot</span>
+									<span id="bot-score">0</span>
+								</div>
+							</div>
+	
+							<!-- Player Choices: The buttons the user clicks -->
+							<div class="game-choices">
+									<button class="game-choice-btn" data-choice="rock" aria-label="Choose Rock">
+										<svg xmlns="http://www.w3.org/2000/svg"
+												 width="24" height="24"
+												 viewBox="0 0 24 24" fill="none"
+												 stroke="currentColor" stroke-width="2"
+												 stroke-linecap="round" stroke-linejoin="round"
+												 class="lucide lucide-grab-icon lucide-grab"
+										>
+											<path d="M18 11.5V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4"/>
+											<path d="M14 10V8a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/>
+											<path d="M10 9.9V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5"/>
+											<path d="M6 14a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/>
+											<path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0"/>
+										</svg>
+									</button>
+									<button class="game-choice-btn" data-choice="paper" aria-label="Choose Paper">
+										<svg xmlns="http://www.w3.org/2000/svg"
+												 width="24" height="24"
+												 viewBox="0 0 24 24" fill="none"
+												 stroke="currentColor" stroke-width="2"
+												 stroke-linecap="round" stroke-linejoin="round"
+												 class="lucide lucide-hand-icon lucide-hand"
+										>
+											<path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/>
+											<path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/>
+											<path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/>
+											<path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+										</svg>
+									</button>
+									<button class="game-choice-btn" data-choice="scissors" aria-label="Choose Scissors">
+										<svg xmlns="http://www.w3.org/2000/svg"
+												 width="24" height="24"
+												 viewBox="0 0 24 24" fill="none"
+												 stroke="currentColor" stroke-width="2"
+												 stroke-linecap="round" stroke-linejoin="round"
+												 class="lucide lucide-scissors-icon lucide-scissors"
+										>
+											<circle cx="6" cy="6" r="3"/>
+											<path d="M8.12 8.12 12 12"/>
+											<path d="M20 4 8.12 15.88"/>
+											<circle cx="6" cy="18" r="3"/>
+											<path d="M14.8 14.8 20 20"/>
+										</svg>
+									</button>
+							</div>
+								
+							<!-- Game Controls: Button to reset the game -->
+							<div class="game-controls">
+								<button class="game-reset-btn" id="game-reset-btn">
+									Reset Score
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!-- main section -->
+			<main id="main" class="main">
+				<div id="home">
+					<h1>Home Page</h1>
+					<p>
+						text her
+					</p>
+				</div>
+			</main>
+	
+			<!-- footer -->
+			<div id="footer" class="footer">
+				<div class="footer-sections">
+					<div class="footer-section section-right">
+						<a href="https://linkedin.com/in/abdelhamidmaaira/"
+							 target="_blank"
+							 class="footer-link"
+							 rel="noopener noreferrer"
+							 title="LinkedIn"
+						>
+							<span class="link-text">LinkedIn</span>
+							<svg xmlns="http://www.w3.org/2000/svg"
+									 width="24" height="24" viewBox="0 0 24 24"
+									 fill="none" stroke="currentColor"
+									 stroke-width="2" stroke-linecap="round"
+									 stroke-linejoin="round"
+									 class="lucide lucide-linkedin size-5" aria-hidden="true"
+							>
+								<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+								<rect width="4" height="12" x="2" y="9"></rect>
+								<circle cx="4" cy="4" r="2"></circle>
+							</svg>
+						</a>
+						<a href="https://github.com/Abdev23" target="_blank"
+							 class="footer-link"
+							 rel="noopener noreferrer"
+							 title="GitHub"
+						>
+							<span class="link-text">GitHub</span>
+							<svg xmlns="http://www.w3.org/2000/svg"
+									 width="24" height="24" viewBox="0 0 24 24"
+									 fill="none" stroke="currentColor" stroke-width="2"
+									 stroke-linecap="round" stroke-linejoin="round"
+									 class="lucide lucide-github size-5" aria-hidden="true"
+							>
+								<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+								<path d="M9 18c-4.51 2-5-2-7-2"></path>
+							</svg>
+						</a>
+						<a href="mailto:test.email@gmail.com"
+							 target="_blank"
+							 class="footer-link"
+							 rel="noopener noreferrer"
+							 title="Email"
+						>
+							<span class="link-text">Email</span>
+							<svg xmlns="http://www.w3.org/2000/svg"
+									 width="24" height="24" viewBox="0 0 24 24"
+									 fill="none" stroke="currentColor" stroke-width="2"
+									 stroke-linecap="round" stroke-linejoin="round"
+									 class="lucide lucide-mail size-5" aria-hidden="true"
+							>
+								<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+								<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+							</svg>
+						</a>
+					</div>
+					
+					<div class="footer-section section-left">
+						<p class="footer-text">
+							© <!-- -->2025<!-- -->
+							<a class="inline-link" href="/">abdelhamid.dev</a>
+							<!-- -->|<!-- -->
+							<a class="inline-link bolder" href="/privacy">privacy?</a>
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
-
-
-		<!-- <div style="height: 300vh; padding: 5rem; z-index: 2;">
-  		<h1>Scroll Down to See the Effect</h1>
-  		<p>Your portfolio content would go here...</p>
-		</div>
-
-    <div class="main">
-  		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, voluptate rem beatae dolor, fugit mollitia suscipit aut quas quos doloremque enim accusantium! Quos fugiat iure provident facilis error, blanditiis iste sed earum ea molestias rem eveniet ut ullam enim unde maiores adipisci voluptatum quam amet. Quas saepe assumenda ab commodi.
-		</div> -->
 
 		<script src="./main.js"></script>
 	</body>

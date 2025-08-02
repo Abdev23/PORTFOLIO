@@ -4,6 +4,7 @@ const HomePage = () => {
     <>
       <div id="home">
         <h1>Home Page</h1>
+        <p>text her</p>
       </div>
     </>
   );

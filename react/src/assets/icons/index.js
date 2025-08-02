@@ -14,6 +14,9 @@ import SendMessageIcon from './send-message.svg?react';
 import RockIcon from './rock.svg?react';
 import PaperIcon from './paper.svg?react';
 import ScissorsIcon from './scissors.svg?react';
+import EmailIcon from './email.svg?react';
+import GithubIcon from './github.svg?react';
+import LinkedInIcon from './linkedin.svg?react';
 
 
 export {
@@ -31,5 +34,8 @@ export {
   SendMessageIcon,
   RockIcon,
   PaperIcon,
-  ScissorsIcon
+  ScissorsIcon,
+  EmailIcon,
+  GithubIcon,
+  LinkedInIcon
 };

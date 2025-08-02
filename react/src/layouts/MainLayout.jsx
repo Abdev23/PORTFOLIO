@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
       <Tiles />
       <Navbar onMenuClick={setActiveDrawer} />
       
-      <main className="main">
+      <main id= 'main' className="main">
         {children}
       </main>
 
